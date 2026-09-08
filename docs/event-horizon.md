@@ -1,6 +1,6 @@
 # Event Horizon
 
-Event Horizon is Level 5 and the ultimate difficulty in Practical Rust Mastery. It is where guided exercises become original, cross-disciplinary engineering research.
+Event Horizon is Level 5 and the ultimate difficulty in Apotheosis. It is where guided exercises become original, cross-disciplinary engineering research.
 
 This document records the durable philosophy, rules, and original project portfolio. It is a specification, not a transcript and not yet a complete implementation plan.
 
@@ -154,6 +154,8 @@ Before implementation, the selected path must define:
 12. Completion, failure, and abandonment criteria
 
 The charter must survive the repository's philosophy review protocol before it is frozen.
+
+The learner owns path selection and project direction. A designated evaluator confirms charter freezing and final completion using evidence from independent technical reviewers and every required domain expert. An LLM may assist with research and review but cannot be the sole evaluator of research-grade, scientific, safety, or performance claims.
 
 ## Common validation requirements
 
@@ -375,7 +377,8 @@ Event Horizon is complete when:
 - Experiments are reproducible within the declared resource envelope
 - Domain-appropriate external review is complete
 - The learner can defend the work and explain failed approaches
-- The learner proceeds to [The New Beginning](the-new-beginning.md)
+
+After Event Horizon is complete, the learner proceeds to [The New Beginning](the-new-beginning.md) to complete the wider Apotheosis journey.
 
 ## Status
 
