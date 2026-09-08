@@ -31,7 +31,7 @@ Event Horizon demonstrates engineering and research ability. It does not automat
 
 ## Required contribution
 
-The graduate contributes one complete problem package. It may be:
+The graduate contributes one complete learning artifact. It may be:
 
 - A new exercise from Level 1 through Level 4
 - A trial designated as The Unknown for Levels 1–3
@@ -73,9 +73,13 @@ Before creating files, write a proposal answering:
 
 If the final question has no convincing answer, improve an existing exercise instead of creating a new one.
 
-## Problem package
+## Contribution formats
 
-The contribution must include:
+The artifact format follows the contribution type. Do not force non-exercise work into an exercise crate.
+
+### Exercise or The Unknown
+
+An ordinary exercise or The Unknown contribution must include:
 
 ```text
 exercises/
@@ -101,6 +105,25 @@ The exercise README must follow the repository's standard specification and addi
 - **Reviewer notes:** likely ambiguity, safety, and validation risks
 
 Do not include a completed implementation in starter code.
+
+### Field Quest
+
+A Field Quest contribution must include:
+
+- Upstream project and issue or need
+- Reproduction or motivation
+- Proposed patch or review-ready change
+- Tests and validation evidence
+- Maintainer expectations and compatibility notes
+- Review outcome, without requiring upstream acceptance
+
+### Advanced-campaign milestone
+
+An advanced milestone must follow its campaign charter and include its contract, prerequisites, artifacts, validation, safety boundaries, and completion evidence. A Cargo crate is required only when the milestone produces one.
+
+### Event Horizon path proposal
+
+A path proposal belongs under `docs/` and must include the complete Event Horizon charter, coherence argument, resource envelope, safety model, primary-source map, reviewer requirements, and evidence that an advanced campaign cannot represent the same transformation. It does not require an exercise crate before acceptance.
 
 ## Difficulty assignment
 
@@ -133,12 +156,16 @@ Every New Beginning contribution remains outside the main curriculum until compl
 Proposed → Reviewed → Piloted → Revised → Accepted
 ```
 
+The graduate owns the proposal but cannot accept it alone. A designated evaluator confirms lifecycle transitions using evidence from technical reviewers, required domain experts, and the applicable pilot learner or form-specific pilot reviewers. An LLM may assist but cannot be the sole evaluator for scientific, safety-critical, formal, or research-grade claims.
+
 ### Proposed
 
 - Rationale is complete.
-- Learning objective and difficulty are explicit.
-- Behavioral contract exists before implementation-specific tests.
+- Learning or research objective and classification are explicit.
+- The contribution-type-specific contract, charter, or review objective exists before implementation-specific validation.
 - Prerequisites, risks, and non-goals are documented.
+
+An exercise proposal requires its behavioral contract before tests. A Field Quest requires a reproducible upstream need. An advanced milestone requires a campaign contract. An Event Horizon path proposal requires a complete draft charter.
 
 ### Reviewed
 
@@ -157,9 +184,14 @@ Domain expertise is mandatory for correctness-critical scientific, financial, se
 
 ### Piloted
 
-Another learner attempts the problem without private explanation from the author.
+Piloting must match the artifact:
 
-Observe:
+- **Exercise or The Unknown:** another learner attempts it without private explanation from the author.
+- **Field Quest:** an independent reviewer reproduces the need and reviews or applies the proposed change in a clean checkout.
+- **Advanced milestone:** a qualified reviewer runs the smallest useful feasibility or replication milestone defined by its campaign.
+- **Event Horizon path proposal:** technical and domain reviewers conduct a charter red team, resource-feasibility review, and bounded prototype or reference-model exercise. They do not need to complete the proposed path.
+
+Where applicable, observe:
 
 - Where the learner misunderstands the contract
 - Which hints are opened and when
@@ -167,8 +199,9 @@ Observe:
 - Whether tests provide useful feedback
 - Whether the learner can explain and transfer the result
 - Which accidental prerequisites appear
+- Whether reviewers can reproduce the claimed need, result, or feasibility without private context
 
-The pilot is an evaluation of the exercise, not a judgment of the pilot learner.
+The pilot evaluates the artifact, not the pilot learner or reviewer.
 
 ### Revised
 
@@ -178,14 +211,16 @@ Substantial revisions may require another pilot.
 
 ### Accepted
 
-The problem joins the curriculum only when:
+The contribution joins the curriculum only when:
 
-- Its contract is precise and fair
-- The intended concept caused the meaningful difficulty
-- Tests and mastery gates support the claimed outcome
+- Its contract, charter, or contribution objective is precise and fair
+- The intended concept, need, or research transformation is coherent
+- Form-specific validation supports the claimed outcome
 - Required resources are documented and reasonable
 - Safety and scientific claims have appropriate review
 - A future learner or LLM can maintain it from repository documentation
+
+For exercises, form-specific validation includes tests, mastery gates, and a learner pilot. For Field Quests it includes reproducibility and patch review. For advanced milestones it includes campaign-defined evidence. For Event Horizon path proposals it includes charter review, a bounded feasibility artifact, and all required technical and domain approvals.
 
 ## Quality rubric
 

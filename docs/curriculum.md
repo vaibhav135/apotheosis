@@ -2,6 +2,27 @@
 
 This is the canonical source for Apotheosis's stages, difficulty model, workflow, progression, and roadmap status. Educational principles live in [`philosophy.md`](philosophy.md); exercise-construction rules live in [`exercise-authoring.md`](exercise-authoring.md).
 
+## Documentation ownership
+
+Each subject has one canonical owner:
+
+| Subject | Canonical source |
+|---|---|
+| Human introduction and immediate next action | `README.md` |
+| Educational philosophy and granularity | `docs/philosophy.md` |
+| Curriculum stages, lifecycle, aggregate status, and roadmap | `docs/curriculum.md` |
+| Agent startup behavior | `AGENTS.md` |
+| Gate structure and scoring | `docs/llm-onboarding.md` |
+| Exercise construction, testing, and status authority | `docs/exercise-authoring.md` |
+| Track-local concept ownership and status | `docs/tracks/<track>.md` |
+| Approved exercise behavior | The exercise's own `README.md` |
+| Event Horizon | `docs/event-horizon.md` |
+| The New Beginning | `docs/the-new-beginning.md` |
+
+Other documents may summarize a rule for their audience but must link to its canonical owner instead of redefining it. Gate invariants are intentional checksums of canonical rules and must be updated and revalidated when those rules change.
+
+If summaries and canonical sources conflict, report the conflict and stop for learner clarification; do not silently choose one. Current status summaries in the human README, onboarding gate, track specification, and this document must be updated together, with this document owning aggregate status and each exercise README owning its local lifecycle status.
+
 ## Curriculum journey
 
 Apotheosis has four broad stages:
@@ -21,6 +42,7 @@ A focused but non-trivial problem introducing one primary mechanism.
 
 - Clear behavior and limited architecture
 - Meaningful validation and edge cases
+- At least one meaningful design decision
 - Progressive concept and API hints
 
 ### Level 2 — Ascent
@@ -80,6 +102,8 @@ Field Quest is optional real open-source work at any level. It is not a difficul
 
 The New Beginning is post-Event-Horizon stewardship, not Level 6. The graduate creates, reviews, pilots, revises, and contributes one meaningful problem. See [`the-new-beginning.md`](the-new-beginning.md).
 
+“The Void” is atmospheric language for the experience beyond ordinary exercises. It is not a difficulty, trial, stage, or lifecycle state.
+
 ## Core curriculum
 
 The initial coverage direction includes:
@@ -94,6 +118,20 @@ The initial coverage direction includes:
 8. Unsafe Rust, memory, FFI, and sound abstractions
 
 These are planning areas, not equal-sized boxes. Concepts should move into the context where they are learned most naturally.
+
+The detailed Rust coverage map includes:
+
+- Smart pointers and interior mutability
+- Closures and the `Fn`, `FnMut`, and `FnOnce` traits
+- Advanced trait design, associated types, and generic associated types
+- Trait objects, object safety, and dynamic dispatch
+- Generics, `impl Trait`, monomorphization, and static dispatch
+- Typestate and type-driven API design
+- `Send`, `Sync`, threads, channels, locks, and atomics
+- Futures, `Pin`, cancellation, async lifetimes, and backpressure
+- Declarative and procedural macros
+- Unsafe Rust, raw pointers, aliasing, provenance, and memory layout
+- FFI, zero-copy techniques, allocation behavior, and performance trade-offs
 
 ## Current learning unit
 
@@ -166,6 +204,11 @@ Planned → Scaffolded → In Progress → Tests Pass → Reviewed → Mastered
 
 `Provisional` is a roadmap planning label, not an exercise lifecycle status. It indicates that an idea has not yet reached Planned.
 
+- **Provisional:** an unapproved hypothesis; its ID, position, level, scope, and existence may change.
+- **Planned:** the learner or designated evaluator has approved its broad objective and sequence position; its exact contract may remain incomplete.
+
+Only the learner or designated evaluator promotes a Provisional item to Planned. The same authority confirms later lifecycle transitions after their entry criteria are verified. An LLM may record the transition only when designated as evaluator or after explicit confirmation.
+
 ## Solution and review workflow
 
 1. Read the exercise contract and visible tests.
@@ -188,10 +231,10 @@ Runtime black-box behavior is the default. Depending on the stated lesson, valid
 - Timeouts and bounded-concurrency checks
 - Benchmarks and allocation constraints
 - Miri, Loom, Kani, and other specialized tools
-- Design explanations and unsafe safety invariants
+- Design explanations and documented unsafe-code safety invariants
 - Scientific reference models and uncertainty analysis
 
-Correctness tests should be deterministic and portable wherever practical. Hardware-specific performance gates must document reference hardware, pinned workloads, uncertainty, and limitations. Unsupported environments require a portable reference or simulator path.
+Correctness tests must be deterministic by default and portable wherever practical. Any unavoidable nondeterminism requires approval, controlled seeds or bounded tolerance, reproducibility measures, and documented limits. Hardware-specific performance gates must document reference hardware, pinned workloads, uncertainty, and limitations. Unsupported environments require a portable reference or simulator path. Never infer environment-specific performance claims from ordinary CI.
 
 ## Definition of exercise completion
 
@@ -203,7 +246,7 @@ cargo fmt --manifest-path exercises/<track>/<exercise>/Cargo.toml --check
 cargo clippy --manifest-path exercises/<track>/<exercise>/Cargo.toml -- -D warnings
 ```
 
-Completion also requires documented behavior, no unexplained panics or unsafe code, any level-specific artifacts, and compliance with explicit learning constraints.
+Completion also requires documented behavior, no unexplained panics or unsafe code, any level-specific artifacts, and compliance with explicit learning constraints. Every exercise that permits unsafe code must document its safety invariants and explain why they hold.
 
 ## Mastery and adaptive progression
 
@@ -247,7 +290,7 @@ Detailed metadata, testing, hints, artifacts, and LLM decision boundaries are de
 - `rust-toolchain.toml` pins the repository toolchain.
 - Nightly requires an explicit exercise need.
 - Independent exercise crates commit `Cargo.lock`.
-- Dependencies must serve the lesson and be deliberately upgraded.
+- Dependencies must serve the lesson. Upgrades must be deliberate and tested, and changes to APIs or observable behavior must be recorded.
 
 ## Starting primary sources
 
@@ -265,6 +308,8 @@ Detailed metadata, testing, hints, artifacts, and LLM decision boundaries are de
 - [LLVM Language Reference](https://llvm.org/docs/LangRef.html)
 - [Cranelift IR](https://docs.rs/cranelift-codegen/latest/cranelift_codegen/ir/)
 - [Jane Street: How to Build an Exchange](https://www.janestreet.com/tech-talks/building-an-exchange/)
+- [Jane Street: System Jitter and Where to Find It](https://www.janestreet.com/tech-talks/system-jitter-and-where-to-find-it/)
+- [Nasdaq TotalView-ITCH specification](https://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/NQTVITCHspecification.pdf)
 
 Exercise and campaign documents cite the exact authoritative subset they use.
 

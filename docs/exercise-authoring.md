@@ -58,6 +58,12 @@ Rules:
 - IDs remain stable after publication.
 - Difficulty changes require a documented review, not only a renamed label.
 
+## Roadmap planning state
+
+`Provisional` is not exercise metadata or a lifecycle status. It appears only in roadmap documents for an unapproved hypothesis whose ID, position, level, scope, or existence may still change.
+
+An item becomes `Planned` only after the learner or designated evaluator approves its broad objective and sequence position. Its exact contract may remain incomplete at that point. Promotion from Provisional to Planned must be recorded in the canonical curriculum and track documents.
+
 ## Status transitions
 
 ### Planned
@@ -97,6 +103,8 @@ Rules:
 - The learner identifies limitations and failure boundaries.
 
 Status changes must be reflected in the exercise README, relevant track document, and `docs/curriculum.md`.
+
+The learner or designated evaluator confirms every lifecycle transition. An LLM may update status only when it is explicitly acting as that evaluator or after the learner/evaluator confirms the transition.
 
 ## Contract-first design
 
@@ -186,6 +194,8 @@ Committed adversarial tests remain visible. Temporary reviewer experiments are p
 
 Use compile tests, properties, fuzzing, benchmarks, Miri, Loom, Kani, simulation, or scientific reference models only when appropriate to the lesson. Document commands, assumptions, and limits.
 
+Every exercise that permits unsafe code must require the learner to document its safety invariants and explain why they hold. Passing tests or Miri does not replace this argument.
+
 ## Error-contract policy
 
 - Prefer stable public error variants when callers need to distinguish failure categories.
@@ -224,13 +234,13 @@ Do not generate completed learner artifacts. Exercise READMEs provide prompts; t
 
 ## Difficulty calibration
 
-- **Level 1 — First Light:** one focused concept, meaningful validation, little architectural freedom
+- **Level 1 — First Light:** one focused concept, meaningful validation, at least one meaningful design decision, and little architectural freedom
 - **Level 2 — Ascent:** interacting concepts, realistic errors, and local design choices
 - **Level 3 — Crucible:** reusable subsystem design, public contracts, and defended trade-offs
 - **Level 4 — Abyss:** bounded but adversarial research engineering with profound unfamiliarity
 - **Level 5 — Event Horizon:** original multidisciplinary work under a reviewed charter
 
-Level 3–5 exercises use philosophical titles only when the title describes the intended transformation. Always pair one with a precise technical subtitle.
+Major Level 3–5 exercises must use a philosophical title that describes the intended transformation and pair it with a precise technical subtitle. Small supporting milestones may use a technical title alone when a philosophical title would add noise.
 
 ## Track boundaries
 
@@ -246,9 +256,11 @@ Level 3–5 exercises use philosophical titles only when the title describes the
 - Each exercise is an independent crate with a committed lockfile.
 - Add only dependencies that serve the learning objective.
 - Prefer maintained crates and authoritative documentation.
-- Correctness tests should be deterministic and portable wherever practical.
+- Correctness tests must be deterministic by default. An unavoidable exception requires learner approval, bounded tolerance or controlled seeds, reproducibility measures, and documented limitations.
 - Separate hardware-specific performance gates from portable correctness gates.
+- Never infer environment-specific performance claims from ordinary CI results.
 - Live external services require an approved reason and a reliable local substitute.
+- Dependency upgrades must be deliberate and tested. Record upgrades that alter an exercise's API, output, diagnostics, or other observable behavior.
 
 ## Review checklist
 
@@ -265,6 +277,7 @@ Before marking an exercise Scaffolded, verify:
 - Primary sources are cited.
 - Track boundaries are preserved.
 - The split-versus-combine decision is documented and justified.
+- Unsafe code, when permitted, has explicit safety invariants and an explanation of why they hold.
 - Exercise, track, and `docs/curriculum.md` roadmap status are updated.
 
 Before marking Mastered, verify:
@@ -283,7 +296,7 @@ An LLM may independently:
 - Propose alternatives and trade-offs
 - Add tests for already documented behavior after review
 - Suggest focused recovery work
-- Update status after verified completion
+- Propose a status transition after verifying its entry criteria
 
 An LLM must obtain approval before:
 
@@ -295,5 +308,6 @@ An LLM must obtain approval before:
 - Changing difficulty or prerequisites
 - Expanding scope or introducing a new track
 - Rewriting learner code
+- Confirming or recording a status transition unless explicitly designated as evaluator
 
 When uncertain, stop and ask. Silence is not approval.

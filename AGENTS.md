@@ -10,11 +10,10 @@ Before modifying anything:
 2. Read `docs/philosophy.md`.
 3. Read `docs/curriculum.md`.
 4. Read `docs/llm-onboarding.md`.
-5. Read `docs/exercise-authoring.md` when creating or changing exercises.
-6. Read the relevant file under `docs/tracks/`.
-7. Read the complete README, starter code, and tests of every exercise being changed.
-8. Produce the comprehension-gate response required by `docs/llm-onboarding.md`.
-9. Wait for the learner or evaluator to confirm that the gate passed.
+5. When creating, changing, testing, or reviewing an exercise, read `docs/exercise-authoring.md`, the relevant file under `docs/tracks/`, and the complete README, starter code, and tests of every affected exercise.
+6. When working on Event Horizon or The New Beginning, read its dedicated document.
+7. Produce the comprehension-gate response required by `docs/llm-onboarding.md`.
+8. Wait for the learner or evaluator to confirm that the gate passed.
 
 Do not edit files before the gate passes unless the user explicitly asks only to repair the onboarding documentation itself.
 

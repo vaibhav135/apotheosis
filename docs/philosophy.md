@@ -91,13 +91,13 @@ Granularity decisions must consider cognitive load, prerequisites, authenticity,
 
 Difficulty is determined by ambiguity, interacting concepts, design responsibility, failure modes, and guarantees—not code length.
 
-- **Level 1 — First Light:** illuminate one focused mechanism through meaningful application.
+- **Level 1 — First Light:** illuminate one focused mechanism through meaningful application and at least one real design decision.
 - **Level 2 — Ascent:** combine concepts and make local engineering decisions.
 - **Level 3 — Crucible:** design a reusable subsystem and defend trade-offs.
 - **Level 4 — Abyss:** enter bounded but adversarial research engineering.
 - **Level 5 — Event Horizon:** produce original multidisciplinary work under a reviewed charter.
 
-Major Level 3–5 work may pair an evocative philosophical title with a precise technical subtitle. The title must express the intended transformation rather than merely sound dark.
+Major Level 3–5 work must pair an evocative philosophical title with a precise technical subtitle. The title must express the intended transformation rather than merely sound dark. Small supporting milestones may remain technical when another title would add noise.
 
 Each such problem should state:
 

@@ -18,15 +18,19 @@ Purely informational questions that require no repository changes do not need a 
 
 ## Mandatory reading order
 
+Always read:
+
 1. `AGENTS.md`
 2. `README.md`
 3. `docs/philosophy.md`
 4. `docs/curriculum.md`
 5. `docs/llm-onboarding.md`
-6. `docs/exercise-authoring.md`
-7. The relevant `docs/tracks/<track>.md`
-8. The relevant exercise README, source, and tests
-9. `docs/event-horizon.md` or `docs/the-new-beginning.md` when that work is relevant
+
+Then read the documents required by the task:
+
+6. For exercise creation, changes, tests, or review: `docs/exercise-authoring.md`, the relevant `docs/tracks/<track>.md`, and the complete exercise README, source, and tests
+7. For Event Horizon work: `docs/event-horizon.md`
+8. For The New Beginning work: `docs/the-new-beginning.md`
 
 The agent must inspect the filesystem rather than assume these files or their status from a user prompt.
 
