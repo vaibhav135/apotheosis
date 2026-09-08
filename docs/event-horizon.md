@@ -1,6 +1,6 @@
 # Event Horizon
 
-Event Horizon is Level 5 and the ultimate difficulty in Practical Rust Mastery. It is where guided exercises become original, cross-disciplinary engineering research.
+Event Horizon is Level 5 and the ultimate difficulty in Apotheosis. It is where guided exercises become original, cross-disciplinary engineering research.
 
 This document records the durable philosophy, rules, and original project portfolio. It is a specification, not a transcript and not yet a complete implementation plan.
 

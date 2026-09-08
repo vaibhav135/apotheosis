@@ -7,12 +7,14 @@ This repository is a learner-driven Rust curriculum. The learner writes exercise
 Before modifying anything:
 
 1. Read `README.md`.
-2. Read `docs/llm-onboarding.md`.
-3. Read `docs/exercise-authoring.md` when creating or changing exercises.
-4. Read the relevant file under `docs/tracks/`.
-5. Read the complete README, starter code, and tests of every exercise being changed.
-6. Produce the comprehension-gate response required by `docs/llm-onboarding.md`.
-7. Wait for the learner or evaluator to confirm that the gate passed.
+2. Read `docs/philosophy.md`.
+3. Read `docs/curriculum.md`.
+4. Read `docs/llm-onboarding.md`.
+5. Read `docs/exercise-authoring.md` when creating or changing exercises.
+6. Read the relevant file under `docs/tracks/`.
+7. Read the complete README, starter code, and tests of every exercise being changed.
+8. Produce the comprehension-gate response required by `docs/llm-onboarding.md`.
+9. Wait for the learner or evaluator to confirm that the gate passed.
 
 Do not edit files before the gate passes unless the user explicitly asks only to repair the onboarding documentation itself.
 
@@ -28,5 +30,6 @@ Do not edit files before the gate passes unless the user explicitly asks only to
 - Prefer authoritative primary sources for technical and scientific claims.
 - Follow safety, reproducibility, and external-review requirements for advanced work.
 - Update durable documentation with conclusions, not conversation transcripts.
+- Treat `README.md` as the human landing page; place detailed rules in their canonical documents and link rather than duplicate them.
 
 If repository documents conflict, stop and ask the learner which rule should prevail. Do not silently choose an interpretation.

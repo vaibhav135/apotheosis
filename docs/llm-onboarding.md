@@ -20,11 +20,13 @@ Purely informational questions that require no repository changes do not need a 
 
 1. `AGENTS.md`
 2. `README.md`
-3. `docs/llm-onboarding.md`
-4. `docs/exercise-authoring.md`
-5. The relevant `docs/tracks/<track>.md`
-6. The relevant exercise README, source, and tests
-7. `docs/event-horizon.md` or `docs/the-new-beginning.md` when that work is relevant
+3. `docs/philosophy.md`
+4. `docs/curriculum.md`
+5. `docs/llm-onboarding.md`
+6. `docs/exercise-authoring.md`
+7. The relevant `docs/tracks/<track>.md`
+8. The relevant exercise README, source, and tests
+9. `docs/event-horizon.md` or `docs/the-new-beginning.md` when that work is relevant
 
 The agent must inspect the filesystem rather than assume these files or their status from a user prompt.
 
@@ -168,7 +170,7 @@ All generated work still requires ordinary review, tests, falsification, and dom
 
 ## Protocol validation
 
-The onboarding protocol was blind-retested on 2026-09-08 after adopting adaptive learning-unit granularity. The fresh agent received only the repository path and no conversation history.
+The onboarding protocol was blind-retested on 2026-09-08 after separating the human README from canonical philosophy, curriculum, and agent documents. The fresh agent received only the repository path and no conversation history.
 
 Independent evaluation found:
 
@@ -180,6 +182,8 @@ Independent evaluation found:
 - Correct rejection of fixed exercise counts
 - Correct identification of later `serde` entries as provisional planning hypotheses
 - Correct explanation of when work should remain integrated or be split
+- Correct identification of each canonical document and its audience
+- Correct distinction between Provisional roadmap ideas and exercise lifecycle statuses
 - Correct refusal to edit before gate confirmation
 
 This validates repository-only onboarding for the current core state. It does not permanently validate future revisions. Repeat the blind pilot after material changes to onboarding rules, taxonomy, authoring policy, or curriculum structure.

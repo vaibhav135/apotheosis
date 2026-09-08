@@ -1,12 +1,12 @@
 # Exercise authoring specification
 
-This document defines how exercises are proposed, scaffolded, tested, reviewed, and maintained. It converts the top-level philosophy into concrete authoring rules.
+This document defines how exercises are proposed, scaffolded, tested, reviewed, and maintained. It converts [`philosophy.md`](philosophy.md) into concrete authoring rules.
 
 Use [`../templates/exercise-readme.md`](../templates/exercise-readme.md) for every new exercise.
 
 ## Authoring sequence
 
-1. Read the top-level README and relevant track specification.
+1. Read the human README, `docs/philosophy.md`, `docs/curriculum.md`, and the relevant track specification.
 2. Identify one curriculum gap or approved roadmap item.
 3. Propose the contract, public API, dependencies, constraints, and test strategy.
 4. Explain assumptions and alternatives.
@@ -96,7 +96,7 @@ Rules:
 - The learner adapts the solution to a changed requirement.
 - The learner identifies limitations and failure boundaries.
 
-Status changes must be reflected in the exercise README and top-level roadmap.
+Status changes must be reflected in the exercise README, relevant track document, and `docs/curriculum.md`.
 
 ## Contract-first design
 
@@ -265,7 +265,7 @@ Before marking an exercise Scaffolded, verify:
 - Primary sources are cited.
 - Track boundaries are preserved.
 - The split-versus-combine decision is documented and justified.
-- README roadmap status is updated.
+- Exercise, track, and `docs/curriculum.md` roadmap status are updated.
 
 Before marking Mastered, verify:
 

@@ -54,14 +54,14 @@ Only SERDE-01 has an approved complete contract. Later entries are planning hypo
 
 The table does not require six consecutive Serde exercises.
 
-| ID | Difficulty | Exercise | Status | Prerequisites |
+| ID | Difficulty | Exercise | Planning state | Prerequisites |
 |---|---|---|---|---|
 | SERDE-01 | Level 1 — First Light | Job Manifest Codec | Scaffolded | Rust fundamentals |
-| SERDE-02 | Level 1 — First Light | Reliable Configuration | Planned | SERDE-01 reviewed |
-| SERDE-03 | Level 1 — First Light | API Events | Planned | SERDE-02 reviewed |
-| SERDE-04 | Level 2 — Ascent | Legacy Data Normalizer | Planned | SERDE-01 through SERDE-03 mastered |
-| SERDE-05 | Level 2 — Ascent | Streaming Records | Planned | SERDE-04 reviewed; standard I/O basics |
-| SERDE-06 | Level 3 — Crucible | Versioned Protocol | Planned | SERDE-04 and SERDE-05 mastered |
+| SERDE-02 | Level 1 — First Light | Reliable Configuration | Provisional | SERDE-01 reviewed |
+| SERDE-03 | Level 1 — First Light | API Events | Provisional | SERDE-02 reviewed |
+| SERDE-04 | Level 2 — Ascent | Legacy Data Normalizer | Provisional | SERDE-01 through SERDE-03 mastered |
+| SERDE-05 | Level 2 — Ascent | Streaming Records | Provisional | SERDE-04 reviewed; standard I/O basics |
+| SERDE-06 | Level 3 — Crucible | Versioned Protocol | Provisional | SERDE-04 and SERDE-05 mastered |
 
 None of the initial six is The Unknown. The learner is encountering Serde for the first time, so this track teaches through difficult progressive scaffolding before independent-discovery trials appear elsewhere.
 

@@ -225,7 +225,7 @@ Reject a problem that:
 
 ## Relationship to philosophy review
 
-Before acceptance, apply the README's complete philosophy review protocol:
+Before acceptance, apply the complete review protocol in [`philosophy.md`](philosophy.md):
 
 1. Restate the learning claim.
 2. Construct the theory of change.
