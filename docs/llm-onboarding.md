@@ -191,3 +191,5 @@ Independent evaluation found:
 - Correct refusal to edit before gate confirmation
 
 This validates repository-only onboarding for the current core state. It does not permanently validate future revisions. Repeat the blind pilot after material changes to onboarding rules, taxonomy, authoring policy, or curriculum structure.
+
+The complete gate response, retry record, point-by-point score, critical-invariant evaluation, tested commit, and limitations are preserved in [`validation/llm-onboarding-11dfc43.md`](validation/llm-onboarding-11dfc43.md).
