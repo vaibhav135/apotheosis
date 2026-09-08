@@ -48,7 +48,11 @@ The initial exercises use:
 
 Additional format crates or testing libraries require discussion before being added. JSON remains the primary format so difficulty comes from data-boundary design rather than repeatedly learning format-specific syntax.
 
-## Roadmap
+## Provisional roadmap
+
+Only SERDE-01 has an approved complete contract. Later entries are planning hypotheses. They may be merged, moved into integration-focused tracks, split, reordered, or removed after reviewing learner progress and applying the repository's granularity rubric.
+
+The table does not require six consecutive Serde exercises.
 
 | ID | Difficulty | Exercise | Status | Prerequisites |
 |---|---|---|---|---|
@@ -306,7 +310,7 @@ This is sufficient for ordinary typed JSON work but not complex ingestion or com
 
 ### Recommended mastery
 
-- Master all six exercises.
+- Complete the approved exercises and mastery variations needed to demonstrate the outcomes below; do not use a fixed exercise count as the gate.
 - Design explicit wire/domain boundaries.
 - Normalize legacy data without accidental ambiguity.
 - Process NDJSON with bounded memory and clear error policy.

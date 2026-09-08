@@ -20,6 +20,21 @@ Use [`../templates/exercise-readme.md`](../templates/exercise-readme.md) for eve
 
 Do not batch contract approval and implementation into one silent action.
 
+## Learning-unit granularity
+
+There is no required number of exercises per batch, track, or campaign. Design one coherent learning unit at a time and implement one approved exercise or milestone at a time.
+
+Each exercise needs one governing question. Supporting objectives belong together only when their interaction is necessary to answer that question.
+
+Proposals must include a short granularity decision:
+
+- **Keep together** when integration is the lesson, splitting would create toy work, or the guarantee exists only across the combined behavior.
+- **Split** when a concept has an independent feedback loop, unfamiliar concepts obscure one another, prerequisites differ, or each part can produce a meaningful result.
+- **Move** a concept when it is better learned inside another practical track than as library-specific coverage.
+- **Remove** a goal when it exists only to make the exercise appear denser or more difficult.
+
+Evaluate cognitive load, prerequisites, authenticity, testability, feedback speed, transfer, motivation, resource cost, and safety. Exercise count and code size are not substitutes for this analysis.
+
 ## Mandatory metadata
 
 Every exercise README begins with these fields:
@@ -99,6 +114,7 @@ Before tests or starter code, decide and obtain approval for:
 - Hint progression
 - Mastery variation
 - Dependencies and platform assumptions
+- Whether the work should remain integrated, be split, move to another track, or be removed
 
 The contract must answer relevant boundary questions such as:
 
@@ -248,6 +264,7 @@ Before marking an exercise Scaffolded, verify:
 - Hints progress from concepts to APIs without giving away the solution immediately.
 - Primary sources are cited.
 - Track boundaries are preserved.
+- The split-versus-combine decision is documented and justified.
 - README roadmap status is updated.
 
 Before marking Mastered, verify:

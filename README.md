@@ -17,6 +17,7 @@ The name describes transformation, not omniscience. Completion does not place an
 - [Teaching philosophy](#teaching-philosophy)
 - [Curriculum constitution](#curriculum-constitution)
 - [Philosophy review protocol](#philosophy-review-protocol)
+- [Learning-unit granularity](#learning-unit-granularity)
 - [Difficulty levels](#difficulty-levels)
 - [Philosophical naming and reflection](#philosophical-naming-and-reflection)
 - [The Unknown](#the-unknown)
@@ -79,7 +80,7 @@ This list is a coverage map, not a promise to cover every crate or every corner 
 - Tests primarily validate observable behavior rather than prescribing internals.
 - Implementation constraints are permitted when a particular technique is the learning objective.
 - Difficult topics may require design explanations, compile-time checks, benchmarks, or safety arguments in addition to passing runtime tests.
-- Exercise batches are deliberately small so future work can respond to the learner's progress.
+- Learning units are deliberately bounded so future work can respond to the learner's progress.
 - The curriculum favors actively maintained, commonly used crates but teaches concepts rather than crate-specific trivia.
 - Introductory exercises remain challenging: they isolate a new concept but still require validation, edge-case reasoning, and meaningful design decisions.
 - Every ecosystem track begins with challenging first-use exercises before progressing into production usage, failure handling, integration, and advanced design.
@@ -126,6 +127,31 @@ Warning signs that require revision include:
 - The roadmap grows faster than the learner's demonstrated readiness.
 - Names and spectacle become more important than technical substance.
 - New exercises repeatedly require undocumented assumptions.
+
+## Learning-unit granularity
+
+The structure follows the knowledge—not the other way around.
+
+There is no mandatory number of exercises in a batch, track, or campaign. Plan one coherent learning unit at a time, then implement and review one approved exercise or milestone at a time.
+
+Every exercise should have one governing question. It may contain several objectives when they are necessary to answer that question. Density comes from deeper validation, review, transfer, and reflection—not from accumulating unrelated features.
+
+Split work when:
+
+- A new concept can be learned and validated independently.
+- Multiple unfamiliar ideas make the source of difficulty unclear.
+- Feedback would arrive too late to guide the learner.
+- Separate parts have different prerequisites or failure modes.
+- Each part can produce a meaningful learning result by itself.
+
+Keep work together when:
+
+- The interaction between concepts is the lesson.
+- Splitting would create artificial toy tasks.
+- The required guarantee only exists at the integration boundary.
+- Architectural trade-offs cannot be understood independently.
+
+Granularity decisions must consider cognitive load, prerequisite knowledge, authenticity, testability, feedback speed, transfer, motivation, resources, and safety. Authors must explain why a proposed unit should or should not be split before its contract is approved.
 
 ## Difficulty levels
 
@@ -344,7 +370,7 @@ This stage develops practical Rust fluency, familiarity with common libraries, a
 
 #### First track: reliable data boundaries with `serde`
 
-The first planned batch introduces `serde` without reducing fundamentals to trivial derive-only tasks:
+The current provisional `serde` roadmap introduces the library without reducing fundamentals to trivial derive-only tasks:
 
 | ID | Difficulty | Exercise | Primary concepts | Status |
 |---|---|---|---|---|
@@ -357,7 +383,9 @@ The first planned batch introduces `serde` without reducing fundamentals to triv
 
 Borrowed and zero-copy deserialization belongs in the later parsing and lifetime track, after ordinary deserialization is understood.
 
-None of the first six exercises is designated as The Unknown. Because this is the learner's first substantial use of `serde`, the track should teach the library through difficult, progressively scaffolded work before testing independent discovery.
+None of the currently listed exercises is designated as The Unknown. Because this is the learner's first substantial use of `serde`, the track should teach the library through difficult, progressively scaffolded work before testing independent discovery.
+
+Entries after the currently active exercise are planning hypotheses, not a requirement to complete six consecutive Serde exercises. They may be merged, moved into a more natural integration track, split, reordered, or removed after applying the granularity rubric and reviewing learner progress.
 
 ### Stage 2: Advanced campaigns
 
@@ -380,7 +408,7 @@ After the prerequisite campaigns and Death of Ego, the learner selects one of th
 
 After Event Horizon, the learner contributes one meaningful new exercise under the requirements defined above.
 
-Generate only **4–6 related exercises at a time**. Do not generate the entire roadmap in one pass. Later batches should account for weaknesses and misunderstandings discovered during solution reviews.
+Design only the next coherent learning unit rather than generating the entire roadmap in one pass. A unit may contain one exercise, several related exercises, or milestones within a larger project. Later units must account for weaknesses and misunderstandings discovered during solution reviews.
 
 Tracks do not need equal numbers of exercises or one exercise at every difficulty. Coverage and learning progression take priority over symmetry.
 
@@ -599,8 +627,9 @@ When extending this repository:
 
 - Treat this README as the curriculum contract.
 - Do not generate a large exercise set without first discussing the next track with the learner.
-- Generate only 4–6 exercises in a coherent batch.
+- Design one coherent learning unit at a time; never infer a fixed exercise count.
 - Explain proposed learning objectives, sequencing, dependencies, and difficulty before creating files.
+- Explain why the proposed work should remain integrated or be split before contract approval.
 - Scaffold problem statements, starter signatures, and tests; do not provide finished solutions unless explicitly requested.
 - Keep decisions visible and avoid unrelated repository changes.
 - During review, critique and explain before rewriting the learner's code.

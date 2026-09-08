@@ -59,7 +59,7 @@ Summarize contract-first design, starter-state policy, visible tests, review-tim
 
 ### 6. Relevant track boundaries
 
-State the current exercise's objectives and identify concepts reserved for later exercises so they are not introduced accidentally.
+State the current exercise's objectives, identify concepts reserved for later exercises, and explain whether the surrounding roadmap is approved or provisional. Apply the granularity rule instead of assuming a fixed exercise count.
 
 ### 7. Safety and research boundaries
 
@@ -89,7 +89,7 @@ Every item below must be understood. Missing or contradicting any one fails the 
 6. Field Quest is optional real open-source work, not a difficulty.
 7. Runtime black-box behavior is the default; internal constraints require an explicit learning reason.
 8. Passing tests is progress, not mastery; explanation, diagnosis, transfer, and limitation analysis also matter.
-9. Exercise batches contain 4–6 related problems, but implementation normally proceeds one approved exercise at a time.
+9. Planning uses coherent learning units with no fixed exercise count; implementation normally proceeds one approved exercise or milestone at a time.
 10. Event Horizon has three original paths, only one active at a time, and requires reviewed charters and domain-appropriate evidence.
 11. The New Beginning is post-Event-Horizon stewardship, not Level 6.
 12. Scientific, performance, safety, and research-grade claims cannot be accepted solely because an LLM generated them or ordinary tests pass.
@@ -129,7 +129,7 @@ Score each item as `1` only when the response is materially correct; otherwise s
 
 ### Scope, research, and safety — 3 points
 
-16. Preserves track boundaries and avoids stealing later concepts.
+16. Preserves track boundaries, recognizes provisional roadmap entries, and avoids using a fixed count or stealing later concepts.
 17. Requires primary sources and appropriate review for advanced claims.
 18. Recognizes portability, reproducibility, and explicit safety boundaries.
 
@@ -168,7 +168,7 @@ All generated work still requires ordinary review, tests, falsification, and dom
 
 ## Protocol validation
 
-The onboarding protocol was blind-piloted on 2026-09-08 with a fresh agent given only the repository path and no conversation history.
+The onboarding protocol was blind-retested on 2026-09-08 after adopting adaptive learning-unit granularity. The fresh agent received only the repository path and no conversation history.
 
 Independent evaluation found:
 
@@ -177,6 +177,9 @@ Independent evaluation found:
 - Correct identification of SERDE-01 as scaffolded and unsolved
 - Correct identification of learner implementation as the next action
 - Correct preservation of later `serde` concept boundaries
+- Correct rejection of fixed exercise counts
+- Correct identification of later `serde` entries as provisional planning hypotheses
+- Correct explanation of when work should remain integrated or be split
 - Correct refusal to edit before gate confirmation
 
 This validates repository-only onboarding for the current core state. It does not permanently validate future revisions. Repeat the blind pilot after material changes to onboarding rules, taxonomy, authoring policy, or curriculum structure.
