@@ -2,8 +2,9 @@
 
 - **ID:** `SERDE-01`
 - **Track:** Reliable data boundaries with `serde`
-- **Stage:** Core
-- **Difficulty:** Level 1 — First Light
+- **Level:** Level 1 — First Light
+- **Curriculum:** Core
+- **Participation:** Required
 - **Trial:** None
 - **Field Quest:** No
 - **Status:** Scaffolded
@@ -245,6 +246,6 @@ Do not implement the legacy variation until the initial solution has been review
 These notes constrain future maintainers and do not prescribe the learner's implementation.
 
 - **Reserved concepts:** strict unknown-field configuration, tagged enums, legacy alternatives, streaming, borrowed deserialization, and full custom data formats belong to later exercises.
-- **Difficulty rationale:** one primary new system is introduced, but the custom newtype, canonical representation, and malformed-input requirements prevent a trivial derive-only solution.
+- **Level rationale:** one primary new system is introduced, but the custom newtype, canonical representation, and malformed-input requirements prevent a trivial derive-only solution.
 - **Expected failure modes:** accepting uppercase or wrong-length IDs, serializing the numeric value directly, panicking on malformed input, parsing complete JSON manually, or using unstable full error strings in tests.
 - **Approval record:** the learner approved the contract before scaffolding.

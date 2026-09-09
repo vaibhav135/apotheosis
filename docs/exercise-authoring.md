@@ -37,13 +37,14 @@ Evaluate cognitive load, prerequisites, authenticity, testability, feedback spee
 
 ## Mandatory metadata
 
-Every exercise README begins with these fields:
+Every ordinary Levels 1–4 exercise README begins with these fields:
 
 ```text
 ID: <TRACK-NUMBER>
 Track: <canonical track name>
-Stage: Core | Advanced | Event Horizon
-Difficulty: Level 1 — First Light | Level 2 — Ascent | Level 3 — Crucible | Level 4 — Abyss | Level 5 — Event Horizon
+Level: Level 1 — First Light | Level 2 — Ascent | Level 3 — Crucible | Level 4 — Abyss
+Curriculum: Core | Advanced
+Participation: Required | Optional specialization
 Trial: None | The Unknown
 Field Quest: Yes | No
 Status: Planned | Scaffolded | In Progress | Tests Pass | Reviewed | Mastered
@@ -52,11 +53,14 @@ Prerequisites: None | <comma-separated exercise IDs or named gates>
 
 Rules:
 
+- This ordinary exercise metadata applies to Levels 1–4. Level 5 uses the charter and milestone rules in `docs/event-horizon.md`.
+- Core is valid at Levels 1–3; Advanced is valid at Levels 3–4.
 - `The Unknown` is valid only for Levels 1–3.
-- Levels 4–5 are inherently research-heavy and use `Trial: None`.
-- Field Quest is independent of difficulty and trial.
+- Level 4 is inherently research-heavy and uses `Trial: None`. Level 5 follows Event Horizon charter metadata, so the ordinary `Trial` field does not apply.
+- Participation is independent of Level and Curriculum. Optional specialization does not mean easier work.
+- Field Quest is independent of Level and Trial.
 - IDs remain stable after publication.
-- Difficulty changes require a documented review, not only a renamed label.
+- Level changes require a documented review, not only a renamed label.
 
 ## Roadmap planning state
 
@@ -232,7 +236,7 @@ learner/
 
 Do not generate completed learner artifacts. Exercise READMEs provide prompts; the learner creates the responses.
 
-## Difficulty calibration
+## Level calibration
 
 - **Level 1 — First Light:** one focused concept, meaningful validation, at least one meaningful design decision, and little architectural freedom
 - **Level 2 — Ascent:** interacting concepts, realistic errors, and local design choices
@@ -305,7 +309,7 @@ An LLM must obtain approval before:
 - Adding dependencies
 - Moving concepts between exercises
 - Adding implementation constraints
-- Changing difficulty or prerequisites
+- Changing Level or prerequisites
 - Expanding scope or introducing a new track
 - Rewriting learner code
 - Confirming or recording a status transition unless explicitly designated as evaluator
