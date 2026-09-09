@@ -46,18 +46,18 @@ Explain who writes solutions, what the AI contributes, and what mastery means be
 
 Identify:
 
-- Current stage and track
+- Current Level, Curriculum, and track
 - Existing scaffolded exercise
 - What the learner is expected to do next
 - Whether any solution has been implemented
 
-### 3. Difficulty model
+### 3. Level and curriculum model
 
-List Levels 1–5 in order and distinguish their engineering responsibilities.
+Explain the Level-first hierarchy. List Levels 1–5 in order with their engineering responsibilities, identify where Core and Advanced work occur, distinguish Core from Advanced, and define optional specialization. Explain what a Convergence checkpoint is and is not.
 
 ### 4. Special designations
 
-Explain The Unknown, Field Quest, and The New Beginning. State what is and is not a difficulty level.
+Explain The Unknown, Field Quest, and The New Beginning. State which items are and are not Levels.
 
 ### 5. Authoring and testing rules
 
@@ -70,6 +70,12 @@ State the current exercise's objectives, identify concepts reserved for later ex
 ### 7. Safety and research boundaries
 
 Explain when primary sources, reproducibility, domain review, simulations, or explicit safety limits are required.
+
+The response must also:
+
+- Name all three original Event Horizon paths: **Iron Meridian — The Architecture of Trust**, **Genesis — The Living Equation**, and **The Observer — The Limits of Knowing**.
+- State that only one path may be active at a time and completing one completes Event Horizon.
+- State that exact charters remain unfrozen until prerequisites are complete and that each active path requires a reviewed charter with domain-appropriate evidence.
 
 ### 8. Proposed next action
 
@@ -90,17 +96,20 @@ Every item below must be understood. Missing or contradicting any one fails the 
 1. The learner writes exercise solutions unless explicitly requesting a full implementation.
 2. Exercise contracts are discussed and approved before files are generated.
 3. The AI critiques and explains before rewriting learner code.
-4. Difficulty is Level 1 — First Light, Level 2 — Ascent, Level 3 — Crucible, Level 4 — Abyss, and Level 5 — Event Horizon.
+4. The progression is Level 1 — First Light, Level 2 — Ascent, Level 3 — Crucible, Level 4 — Abyss, and Level 5 — Event Horizon.
 5. The Unknown applies selectively to Levels 1–3; Levels 4–5 are inherently research-heavy.
-6. Field Quest is optional real open-source work, not a difficulty.
+6. Field Quest is optional real open-source work, not a Level.
 7. Runtime black-box behavior is the default; internal constraints require an explicit learning reason.
 8. Passing tests is progress, not mastery; explanation, diagnosis, transfer, and limitation analysis also matter.
 9. Planning uses coherent learning units with no fixed exercise count; implementation normally proceeds one approved exercise or milestone at a time.
-10. Event Horizon has three original paths, only one active at a time, and requires reviewed charters and domain-appropriate evidence.
+10. The response satisfies every Event Horizon output requirement stated in section 7; naming all three paths is mandatory rather than implied by saying that three paths exist.
 11. The New Beginning is post-Event-Horizon stewardship, not Level 6.
 12. Scientific, performance, safety, and research-grade claims cannot be accepted solely because an LLM generated them or ordinary tests pass.
 13. The current first track is `serde`; SERDE-01 is scaffolded and intentionally has no solution.
 14. The next learner action is to solve SERDE-01 unless the learner explicitly changes direction.
+15. Level is primary: Levels 1–2 are Core, Level 3 may be Core or Advanced, Level 4 is Advanced, and Event Horizon is only Level 5. The New Beginning follows the levels.
+16. Curriculum distinguishes Core use of established machinery from Advanced investigation or construction beneath it; optional specialization is a separate participation requirement.
+17. Convergence is an occasional integration checkpoint for a combined guarantee, not a level, Curriculum value, participation requirement, lifecycle status, or fixed-count requirement.
 
 ## Scoring rubric
 
@@ -113,7 +122,7 @@ Score each item as `1` only when the response is materially correct; otherwise s
 
 ### Current state — 4 points
 
-3. Identifies the core curriculum and `serde` track.
+3. Identifies the current work as Level 1, Core, and in the `serde` track.
 4. Identifies SERDE-01 by name and status.
 5. States that its implementation remains `todo!()` scaffolding.
 6. Proposes learner implementation or contract-preserving support as the next step.
@@ -121,7 +130,7 @@ Score each item as `1` only when the response is materially correct; otherwise s
 ### Taxonomy — 4 points
 
 7. Lists all five levels correctly and in order.
-8. Distinguishes focused application, integration, subsystem design, adversarial research, and grand research.
+8. Distinguishes focused application, integration, subsystem design, adversarial research, and grand research; also explains the Level-first Core/Advanced hierarchy and participation requirement.
 9. Classifies The Unknown and Field Quest correctly.
 10. Classifies The New Beginning correctly.
 
@@ -172,24 +181,6 @@ Passing proves that an agent can restate the repository contract. It does not pr
 
 All generated work still requires ordinary review, tests, falsification, and domain expertise where applicable.
 
-## Protocol validation
+## Validation status
 
-The onboarding protocol was blind-retested on 2026-09-08 after separating the human README from canonical philosophy, curriculum, and agent documents. The fresh agent received only the repository path and no conversation history.
-
-Independent evaluation found:
-
-- All 14 critical invariants satisfied
-- 20 of 20 rubric points satisfied
-- Correct identification of SERDE-01 as scaffolded and unsolved
-- Correct identification of learner implementation as the next action
-- Correct preservation of later `serde` concept boundaries
-- Correct rejection of fixed exercise counts
-- Correct identification of later `serde` entries as provisional planning hypotheses
-- Correct explanation of when work should remain integrated or be split
-- Correct identification of each canonical document and its audience
-- Correct distinction between Provisional roadmap ideas and exercise lifecycle statuses
-- Correct refusal to edit before gate confirmation
-
-This validates repository-only onboarding for the current core state. It does not permanently validate future revisions. Repeat the blind pilot after material changes to onboarding rules, taxonomy, authoring policy, or curriculum structure.
-
-The complete gate response, retry record, point-by-point score, critical-invariant evaluation, tested commit, and limitations are preserved in [`validation/llm-onboarding-11dfc43.md`](validation/llm-onboarding-11dfc43.md).
+The current Level-first onboarding protocol requires independent validation before it may be described as validated. Superseded evidence is indexed in [`docs/validation/README.md`](validation/README.md) as a historical audit trail, not as proof about the current rules.

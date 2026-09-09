@@ -17,6 +17,24 @@ Before modifying anything:
 
 Do not edit files before the gate passes unless the user explicitly asks only to repair the onboarding documentation itself.
 
+## Quick task routing
+
+This table is an index, not a replacement for the mandatory reading order. The linked documents remain canonical.
+
+| Task | Additional source to read |
+|---|---|
+| Understand educational principles or granularity | `docs/philosophy.md` |
+| Inspect levels, curriculum classification, progression, roadmap, or aggregate status | `docs/curriculum.md` |
+| Produce or evaluate the comprehension gate | `docs/llm-onboarding.md` |
+| Create, change, test, or review an exercise | `docs/exercise-authoring.md`, the relevant `docs/tracks/<track>.md`, and the complete exercise README, starter code, and tests |
+| Work on the current Serde track | `docs/tracks/data-and-serde.md` |
+| Scaffold a newly approved exercise | `templates/exercise-readme.md` |
+| Work on Event Horizon | `docs/event-horizon.md` |
+| Work on The New Beginning | `docs/the-new-beginning.md` |
+| Inspect prior onboarding evidence | `docs/validation/` |
+
+If a new track is added, its canonical boundary document belongs under `docs/tracks/` and must be linked from the curriculum and human README.
+
 ## Non-negotiable behavior
 
 - Explain your understanding, assumptions, alternatives, and trade-offs before implementation.

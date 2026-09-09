@@ -63,13 +63,14 @@ Before creating files, write a proposal answering:
 1. Why does this problem deserve to exist?
 2. What transferable concept does it teach?
 3. What changed in the graduate's own understanding?
-4. Why is the selected difficulty appropriate?
-5. Which prerequisites are genuinely necessary?
-6. What observable evidence would demonstrate learning?
-7. How could a learner pass tests without understanding?
-8. What changed-requirement task would expose shallow understanding?
-9. What safety, accessibility, or scientific-validity risks exist?
-10. Why is this better than adding a note or test to an existing exercise?
+4. Which Level applies, and why is it appropriate?
+5. For an ordinary Levels 1–4 exercise, is its Curriculum Core or Advanced and is its Participation Required or Optional specialization?
+6. Which prerequisites are genuinely necessary?
+7. What observable evidence would demonstrate learning?
+8. How could a learner pass tests without understanding?
+9. What changed-requirement task would expose shallow understanding?
+10. What safety, accessibility, or scientific-validity risks exist?
+11. Why is this better than adding a note or test to an existing exercise?
 
 If the final question has no convincing answer, improve an existing exercise instead of creating a new one.
 
@@ -125,7 +126,7 @@ An advanced milestone must follow its campaign charter and include its contract,
 
 A path proposal belongs under `docs/` and must include the complete Event Horizon charter, coherence argument, resource envelope, safety model, primary-source map, reviewer requirements, and evidence that an advanced campaign cannot represent the same transformation. It does not require an exercise crate before acceptance.
 
-## Difficulty assignment
+## Classification assignment
 
 Assign the lowest level capable of teaching the lesson honestly:
 
@@ -136,6 +137,13 @@ Assign the lowest level capable of teaching the lesson honestly:
 - **Level 5 — Event Horizon:** original multidisciplinary research under a reviewed charter
 
 Difficulty is not determined by code length, obscurity, or how frustrated the author felt.
+
+For an ordinary Levels 1–4 exercise, also assign:
+
+- **Curriculum:** Core when the learner uses established machinery to build production systems; Advanced when the learner builds, investigates, or proves that machinery
+- **Participation:** Required when the applicable path's mastery gate depends on it; Optional specialization when it serves a selected domain or learner goal without blocking ordinary progression
+
+Level 5 proposals follow the Event Horizon path and charter rules instead of ordinary exercise metadata.
 
 ## The Unknown and Field Quest
 
@@ -173,7 +181,7 @@ At least one reviewer examines:
 
 - Technical correctness
 - Pedagogical clarity
-- Difficulty calibration
+- Level calibration
 - Test quality
 - Possibilities for gaming validation
 - Accessibility and resource assumptions

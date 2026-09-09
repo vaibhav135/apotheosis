@@ -47,7 +47,9 @@ The current exercise is:
 
 ### [SERDE-01: Job Manifest Codec](exercises/data-and-serde/01-job-manifest-codec/README.md)
 
-**Difficulty:** Level 1 — First Light
+- **Level:** Level 1 — First Light
+- **Curriculum:** Core
+- **Participation:** Required
 
 You will use Serde derives for an outer type while manually implementing `Serialize` and `Deserialize` for a validated `JobId` newtype.
 
@@ -89,7 +91,7 @@ The learner writes solutions. AI support may scaffold, test, explain, and review
 
 Review criteria come from [`docs/exercise-authoring.md`](docs/exercise-authoring.md). The reviewer reports evidence and findings; the learner or designated evaluator confirms status transitions.
 
-## Difficulty levels
+## Levels
 
 | Level | Name | What changes |
 |---:|---|---|
@@ -99,13 +101,13 @@ Review criteria come from [`docs/exercise-authoring.md`](docs/exercise-authoring
 | 4 | **Abyss** | Enter bounded, adversarial, research-heavy engineering. |
 | 5 | **Event Horizon** | Produce original multidisciplinary work under a reviewed charter. |
 
-Difficulty is not measured by code length or suffering. It is shaped by unfamiliarity, interacting guarantees, design responsibility, failure modes, and the evidence required for correctness.
+A Level describes the difficulty and engineering responsibility of the current work, not a permanent rank attached to the learner. It is shaped by unfamiliarity, interacting guarantees, design responsibility, failure modes, and the evidence required for correctness—not code length or suffering.
 
 ## Special parts of the journey
 
 ### The Unknown
 
-A selective Level 1–3 trial where researching an unfamiliar domain is part of the work. It is not another difficulty level.
+A selective Level 1–3 trial where researching an unfamiliar domain is part of the work. It is not another Level.
 
 ### Field Quest
 
@@ -125,22 +127,52 @@ One path is active at a time, and completing one completes Event Horizon. Exact 
 
 After Event Horizon, the graduate turns one hard-earned insight into a reviewed and piloted problem for a future learner. See [`docs/the-new-beginning.md`](docs/the-new-beginning.md).
 
-## Curriculum shape
+## Curriculum structure
 
-The journey begins with practical Rust and common libraries, then expands into difficult language and systems work:
+Level is the primary progression. Curriculum identifies the nature of work within Levels 1–4:
 
-- Data boundaries and Serde
-- Errors and type-driven APIs
-- Files, parsing, iterators, and zero-copy techniques
-- CLI applications and observability
-- Async networking and services
-- Threads, synchronization, channels, and atomics
-- Advanced traits, lifetimes, macros, and compile-time design
-- Unsafe Rust, memory, and FFI
+| Level | Curriculum or path |
+|---|---|
+| Level 1 — First Light | Core |
+| Level 2 — Ascent | Core |
+| Level 3 — Crucible | Core or Advanced |
+| Level 4 — Abyss | Advanced |
+| Level 5 — Event Horizon | One Event Horizon path |
+| After Level 5 | The New Beginning |
 
-Advanced campaigns later cover storage engines, compilers, distributed systems, computer architecture, low latency, formal methods, and security.
+**Core** builds production systems using established machinery. **Advanced** builds, investigates, or proves that machinery through focused campaigns. Event Horizon is only Level 5, and The New Beginning is stewardship after the levels.
+
+The cumulative Core capability areas cover:
+
+- Validated data and error design
+- Files, text, binary data, and streaming I/O
+- CLI applications, configuration, observability, and process boundaries
+- Reusable APIs and Cargo project architecture
+- Database use, migrations, and transactions
+- Threads, synchronization, and bounded work
+- Async networking, cancellation, backpressure, and services
+- Compatibility, testing, release maintenance, and basic performance evidence
+- Unsafe Rust and safe abstraction boundaries
+
+Security, deterministic testing, documentation, portability, observability, dependency stewardship, and responsible measurement develop throughout Core rather than appearing only once.
+
+Advanced campaigns later cover storage engines, compiler and runtime internals, distributed guarantees, formal verification, advanced security engineering, and hardware-level performance.
 
 This is not a rigid checklist. The structure follows the knowledge: concepts may be combined, split, moved, or removed according to what creates the clearest and most authentic learning unit.
+
+### How curriculum labels fit together
+
+For ordinary Levels 1–4 work, read the metadata in this order:
+
+- **Level** identifies the difficulty and engineering responsibility of the current work.
+- **Curriculum** identifies Core or Advanced work.
+- **Participation** identifies whether the work is required or an optional specialization for a learner's path.
+
+For example, Level 3 work may be Core or Advanced; within either Curriculum, Participation is separately Required or Optional specialization. Level 5 instead follows its Event Horizon path charter.
+
+An occasional **Convergence checkpoint** integrates previous capabilities to establish a guarantee none can provide alone. It is not a level, Curriculum value, or required exercise count.
+
+See the definitive hierarchy and cumulative Core capability areas in [`docs/curriculum.md`](docs/curriculum.md#level-first-curriculum-structure).
 
 ## Core principles
 
@@ -166,7 +198,7 @@ AI agents must begin with [`AGENTS.md`](AGENTS.md), follow its mandatory reading
 |---|---|
 | Human introduction and next action | This README |
 | Educational philosophy and constitution | [`docs/philosophy.md`](docs/philosophy.md) |
-| Curriculum stages, progression, and status | [`docs/curriculum.md`](docs/curriculum.md) |
+| Levels, curriculum classification, progression, and status | [`docs/curriculum.md`](docs/curriculum.md) |
 | AI-agent startup rules | [`AGENTS.md`](AGENTS.md) |
 | LLM comprehension gate | [`docs/llm-onboarding.md`](docs/llm-onboarding.md) |
 | Exercise authoring and testing | [`docs/exercise-authoring.md`](docs/exercise-authoring.md) |

@@ -54,7 +54,7 @@ Only SERDE-01 has an approved complete contract. Later entries are planning hypo
 
 The table does not require six consecutive Serde exercises.
 
-| ID | Difficulty | Exercise | Planning state | Prerequisites |
+| ID | Level | Exercise | Current state | Prerequisites |
 |---|---|---|---|---|
 | SERDE-01 | Level 1 — First Light | Job Manifest Codec | Scaffolded | Rust fundamentals |
 | SERDE-02 | Level 1 — First Light | Reliable Configuration | Provisional | SERDE-01 reviewed |

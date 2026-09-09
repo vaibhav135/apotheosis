@@ -2,8 +2,9 @@
 
 - **ID:** `<TRACK-NUMBER>`
 - **Track:** `<canonical track name>`
-- **Stage:** `Core | Advanced | Event Horizon`
-- **Difficulty:** `Level N — Name`
+- **Level:** `Level N — Name`
+- **Curriculum:** `Core | Advanced`
+- **Participation:** `Required | Optional specialization`
 - **Trial:** `None | The Unknown`
 - **Field Quest:** `Yes | No`
 - **Status:** `Planned | Scaffolded | In Progress | Tests Pass | Reviewed | Mastered`
@@ -127,6 +128,6 @@ cargo clippy --manifest-path exercises/<track>/<exercise>/Cargo.toml -- -D warni
 These notes constrain future maintainers and are not an implementation solution.
 
 - **Reserved concepts:** <concepts intentionally left for later exercises>
-- **Difficulty rationale:** <why this level is appropriate>
+- **Level rationale:** <why this level is appropriate>
 - **Expected failure modes:** <mistakes the tests and review should reveal>
 - **Approval record:** <date or decision reference when available>
